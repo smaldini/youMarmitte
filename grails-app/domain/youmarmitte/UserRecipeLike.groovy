@@ -2,13 +2,13 @@ package youmarmitte
 
 import org.apache.commons.lang.builder.HashCodeBuilder
 
-class Like implements Serializable {
+class UserRecipeLike implements Serializable {
 
 	User user
 	Recipe recipe
 
 	boolean equals(other) {
-		if (!(other instanceof Like)) {
+		if (!(other instanceof UserRecipeLike)) {
 			return false
 		}
 
