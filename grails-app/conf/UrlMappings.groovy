@@ -8,6 +8,8 @@ class UrlMappings {
 		}
 
 		"/"(controller:'recipe')
+        "/user/$username"(controller:'recipe')
+        
 		"500"(view:'/error')
 	}
 }

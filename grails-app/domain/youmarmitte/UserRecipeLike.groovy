@@ -27,4 +27,5 @@ class UserRecipeLike implements Serializable {
 		id composite: ['recipe', 'user']
 		version false
 	}
+
 }

@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><g:layoutTitle default="Grails" /></title>
-        <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
-        <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
-        <g:layoutHead />
-        <g:javascript library="application" />
-    </head>
-    <body>
-        <div id="spinner" class="spinner" style="display:none;">
-            <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
-        </div>
-        <div id="grailsLogo"><a href="http://grails.org"><img src="${resource(dir:'images',file:'grails_logo.png')}" alt="Grails" border="0" /></a></div>
-        <g:layoutBody />
-    </body>
+<head>
+  <title><g:layoutTitle default="Grails"/></title>
+
+  <link rel="shortcut icon" href="${r.resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon"/>
+  <r:require modules="marmitte"/>
+  <r:layoutResources/>
+  <g:layoutHead/>
+</head>
+
+<body>
+<div class="logo">
+  <g:link uri="/"><h1>YouMarmitte</h1></g:link>
+</div>
+
+<div class="user-menu">
+  <sec:ifLoggedIn>
+    <sec:username/> | <g:link controller="logout"><g:message code="marmitte.logout.link"/></g:link>
+  </sec:ifLoggedIn>
+  <sec:ifNotLoggedIn>
+    <g:link controller="login"><g:message code="marmitte.login.link"/></g:link>
+  </sec:ifNotLoggedIn>
+</div>
+
+<div style="clear:both"></div>
+<sec:ifLoggedIn>
+  <div class="recipe-menu">
+    <g:link controller="recipe" action="newRecipe"><g:message code="marmitte.newRecipe.link" /></g:link>
+  </div>
+</sec:ifLoggedIn>
+<div class="content">
+  <g:layoutBody/>
+</div>
+<r:layoutResources/>
+</body>
 </html>

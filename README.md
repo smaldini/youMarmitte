@@ -24,3 +24,27 @@ YouMarmitte features :
 * create-controller Recipe (add behaviors for Recipe)
 * s2-quickstart yourmarmitte User Role (generate User, Role and UserRole domain classes in the youmarmitte package)
 * s2ui-override auth (override the not very fancy UI page for login)
+
+# Config.groovy
+
+'/*
+  Use Jquery for AJAX tags
+ */
+grails.views.javascript.library="jquery"
+
+
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'youmarmitte.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'youmarmitte.UserRole'
+grails.plugins.springsecurity.authority.className = 'youmarmitte.Role'
+'
+
+# Misc
+
+* delete /grails-app/views/index.gsp
+* delete /web-app/js/application.js
+
+
+
+
