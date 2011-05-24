@@ -12,7 +12,7 @@ class BootStrap {
 
         def userRole = Role.findByAuthority('ROLE_USER') ?: new Role(authority: 'ROLE_USER').save()
 
-        if(Environment.DEVELOPMENT == Environment.current){
+        //if(Environment.DEVELOPMENT == Environment.current){
 
             def user
 
@@ -24,7 +24,7 @@ class BootStrap {
                 UserRole.create user, userRole
             }
 
-        }
+//        }
 
     }
     def destroy = {

@@ -14,6 +14,7 @@ class RecipeController {
 
     @Secured('ROLE_USER')
     def newRecipe = {
+        [newRecipe: new Recipe(params)]
     }
 
     @Secured('ROLE_USER')

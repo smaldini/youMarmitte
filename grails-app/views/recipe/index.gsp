@@ -7,12 +7,17 @@
 </head>
 
 <body>
+
 <div id="recipes">
   <g:each in="${recipes}" var="recipe">
     <div id="recipe-${recipe.id}">
       <tmpl:recipe recipe="${recipe}"/>
     </div>
   </g:each>
+</div>
+
+<div>
+  Demo notes : use "smaldini", "luis" , "test" with password "test" to sign in. The registration process doesn't work as CloudFoundry doesn't provide a mail server.
 </div>
 </body>
 </html>
