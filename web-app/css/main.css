@@ -193,11 +193,11 @@ td.errors select {
     border: 1px solid red;
 }
 
-td.errors input {
+.errors input {
     border: 1px solid red;
 }
 
-td.errors textarea {
+.errors textarea {
     border: 1px solid red;
 }
 

@@ -14,7 +14,7 @@ class Recipe {
     int difficulty = 0
 
     static constraints = {
-        name blank: false, matches: /\w*/, unique: true
+        name blank: false, matches: /[\w ]*/, unique: true
         description size: 0..400
         difficulty range: 0..5
     }
