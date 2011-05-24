@@ -8,6 +8,7 @@ YouMarmitte features :
 * An online recipes publisher
 * A secured access
 * A social aspect -> Like - Doesn't like
+* deployed on http://youmarmitte.cloudfoundry.com/
 
 # Grails commands to reproduce the setup from the project
 
@@ -46,5 +47,5 @@ grails.plugins.springsecurity.authority.className = 'youmarmitte.Role'
 * delete /web-app/js/application.js
 
 
-
+You now have to browse for Domains, BootStrap, Service, Controller, Taglibs, UrlMapping and Views to see the few lines required for this application :)
 
